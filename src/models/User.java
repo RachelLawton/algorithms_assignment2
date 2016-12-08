@@ -38,6 +38,8 @@ public class User {
                  .toString();
 	}
 
+	
+	
 
 	public long getUserId() {
 		return userId;
@@ -120,8 +122,34 @@ public class User {
 	public void setZipcode(long zipcode) {
 		this.zipcode = zipcode;
 	}
+
+		
+	
+	@Override 
+	public int hashCode()
+	{
+		return Objects.hashCode(this.firstName, this.lastName, this.age, this.gender,this.job,this.zipcode);
+	}
 	
 	
-	
+	@Override
+	  public boolean equals(final Object obj)
+	  {
+	    if (obj instanceof User)
+	    {
+	      final User other = (User) obj;
+	      return Objects.equal(firstName, other.firstName) 
+	          && Objects.equal(lastName,  other.lastName)
+	          && Objects.equal(age,     other.age)
+	          && Objects.equal(gender,  other.gender)
+	          && Objects.equal(job,  other.job)
+	          && Objects.equal(zipcode,  other.zipcode);
+	      
+	    }
+	    else
+	    {
+	      return false;
+	    }
+	  }
 	
 }

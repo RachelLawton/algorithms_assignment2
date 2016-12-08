@@ -1,5 +1,9 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Movie {
 	private long movieId;
 	private String title;
@@ -7,6 +11,9 @@ public class Movie {
 	private String releaseDate;
 	private String url;
 	private int rating;
+	private List<String> movies;
+	
+	
 	
 public Movie(long movieId,String title, String releaseDate, String url, int rating){
 		super();
@@ -58,6 +65,19 @@ public void setReleaseDate(String releaseDate) {
 
 public void setUrl(String url) {
 	this.url = url;
+}
+
+public List<String> getMoviesList(String subString) {
+	List<String> MoviesList = new ArrayList<String>();
+	if (subString != null) {
+		for (String m : MoviesList) {
+
+			if (m.toLowerCase().contains(subString.toLowerCase()))//not case sensitive
+				MoviesList.add(m);
+		}
+	}
+	Collections.sort(MoviesList);//sorts the list
+	return MoviesList;
 }
 	
 

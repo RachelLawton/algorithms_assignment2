@@ -12,7 +12,7 @@ public class RatingReader {
 	public static void ratingReader() throws IOException
 	{
 		
-	File usersFile = new File("data_movieLens/ratings5.dat");
+	File usersFile = new File("ratings5.dat");
     Scanner inUsers = new Scanner(usersFile);
       //each field is separated(delimited) by a '|'
     String delims = "[|]";
@@ -27,7 +27,7 @@ public class RatingReader {
 		
 
 		// output user data to console.
-		if (userTokens.length == 2) {
+		if (userTokens.length == 4) {
 			Rating r = new Rating(userId,movieId,rating);//instead of going to console it foes to the arraylist term
 			ratings.add(r);
 			

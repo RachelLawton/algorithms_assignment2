@@ -32,7 +32,7 @@ public class UserReader {
 		
 
 		// output user data to console.
-		if (userTokens.length == 2) {
+		if (userTokens.length == 7) {
 			User u = new User(userId,firstName,lastName,age,gender,job,zipcode);
 			users.put(userId, u);
 

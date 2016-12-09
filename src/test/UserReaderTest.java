@@ -18,4 +18,4 @@ public class UserReaderTest {
 		UserReader.userReader();
 		assert(UserReader.users.size() > 0);
 	}
-	}
+}

@@ -1,0 +1,13 @@
+<object-stream>
+  <list>
+    <models.User>
+      <userId>1</userId>
+      <firstName>Leonard</firstName>
+      <lastName>Hernandez</lastName>
+      <age>24</age>
+      <gender>M</gender>
+      <job>technician</job>
+      <zipcode>85711</zipcode>
+    </models.User>
+  </list>
+</object-stream>

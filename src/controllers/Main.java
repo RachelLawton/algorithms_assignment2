@@ -23,26 +23,26 @@ import asg.cliche.ShellFactory;
 
 
 
-	public class Main{
-		
-	
-	
-	
+public class Main{
+
+
+
+
 	/*public static void main(String[] args) throws IOException 
 	{
 		Main app = new Main();
 	}
-	
+
 	public Main() throws IOException
 	{
 		input = new Scanner(System.in);
 		movies = new HashMap<Long,Movie>();
 		runMenu();
 	}
-	
+
 	private int mainMenu() 
 	{
-	
+
 	//creates main menu
 	    System.out.println("---------");   
 	    System.out.println("  1) Add Movie");   
@@ -58,16 +58,16 @@ import asg.cliche.ShellFactory;
 	    System.out.print("==>> ");
 	       int option = input.nextInt();
 	       return option;
-		
+
 	}
-	
+
 	private void runMenu() throws IOException
 	 {
 		 int option = 0;
 	       do //prevents it from duplicating itself many times
 	       {
 	    	    option = mainMenu();
-	    	    
+
 	    	   switch (option)
 	           {
 	              case 1:    	//System.out.println("What Employee do you want to add?");
@@ -79,10 +79,10 @@ import asg.cliche.ShellFactory;
 	       }while
 	       (option != 0);
 	   }
-	
+
 private void AddMovie() throws IOException {
-		
-		
+
+
 		if (addMovie != true);
 		{
 			movieCatch = new MovieCatchAPI();
@@ -92,17 +92,17 @@ private void AddMovie() throws IOException {
 		movieId = input.nextLong();
 		Movie m = new Movie (movieId,title,releaseDate,url);
 		movies.put(movieId, m);
-		
+
 		System.out.println("Please insert Movie Title");
 		String title = input.nextLine();
 		title = input.nextLine();
-		
+
 		System.out.println("Please insert Movie Release Date");
 		String releaseDate = input.nextLine();
 		releaseDate = input.nextLine();
-		
-		
-		
+
+
+
 	}
 	public class Main
 	{
@@ -113,40 +113,41 @@ private void AddMovie() throws IOException {
 	 {
 	 movieCatch.addUser(userId,firstName, lastName, age, gender, occupation,zipcode);
 	 }
-	
-	 
+
+
 	 public static void main(String[] args) throws Exception
 	 {
 	 Main main = new Main();
 	 Shell shell = ShellFactory.createConsoleShell("lm", "Welcome to likemovie - ?help for instructions", main);
 	 shell.commandLoop();
-	 main.movieCatch.store();
-	
-public static void main(String[] args) throws IOException
-{
-  FileLogger logger = FileLogger.getLogger();
-  logger.log("Creating user list");
+	 main.movieCatch.store();*/
 
-HashMap<Long,User> users= new HashMap<Long,User>();
-  users.put(new User(1,"Leonard","Hernandez",24,"M","technician",85711));
-  System.out.println(users);
+	public static void main(String[] args) throws IOException
+	{
+		FileLogger logger = FileLogger.getLogger();
+		logger.log("Creating user list");
 
-  logger.log("Serializing contacts to XML");
-  XStream xstream = new XStream(new DomDriver());
-  ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users.xml"));
-  out.writeObject(users);
-  out.close();    
+		//HashMap<Long,User> users= new HashMap<Long,User>();
+		ArrayList<User> users = new ArrayList<User>();
+		users.add(new User(1,"Leonard","Hernandez",24,"M","technician",85711));
+		System.out.println(users);
 
-  logger.log("Finished - shutting down");
-}*/
+		logger.log("Serializing contacts to XML");
+		XStream xstream = new XStream(new DomDriver());
+		ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("users1.xml"));
+		out.writeObject(users);
+		out.close();    
 
-	
-	
-	
-	
-	
-	
-/*public class Main
+		logger.log("Finished - shutting down");
+	}
+
+
+
+
+
+
+
+	/*public class Main
 {
   public MovieCatchAPI movieCatch;
 
@@ -161,7 +162,7 @@ HashMap<Long,User> users= new HashMap<Long,User>();
       movieCatch.load();
     }
   }
-  */
+	 */
 
 
 
@@ -198,9 +199,9 @@ HashMap<Long,User> users= new HashMap<Long,User>();
 	 shell.commandLoop();
 	 Movie m = null;
 	movieCatch.moviesIndex.put(movieId, m);*/
-		
-	 }
+
+}
 
 
 
-	
+

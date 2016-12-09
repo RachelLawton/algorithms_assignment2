@@ -32,7 +32,7 @@ public class MovieCatchAPI {
 	public User addUser(long userId, String firstName, String lastName, int age, String gender, String job,long zipcode)
 	{
 		User u = new User (userId, firstName, lastName, age, gender, job, zipcode );
-		users.put(userId, u);
+		usersIndex.put(userId, u);
 
 		return u;
 	}

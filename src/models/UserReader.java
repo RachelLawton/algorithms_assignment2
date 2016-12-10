@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class UserReader {
 
-	//public static HashMap<Long,User> users= new HashMap<Long,User>();
-	public static ArrayList<User> users = new ArrayList<User>();
+	public static HashMap<Long,User> users= new HashMap<Long,User>();
+	//public static ArrayList<User> users = new ArrayList<User>();
 
 
 	public static void userReader() throws IOException
@@ -36,8 +36,8 @@ public class UserReader {
 			// output user data to console.
 			if (userTokens.length == 7) {
 				User u = new User(userId,firstName,lastName,age,gender,job,zipcode);
-				//users.put(userId, u);
-				users.add(u);
+				users.put(u.userId, u);
+				//users.add(u);
 
 			} else {
 				inUsers.close();

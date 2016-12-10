@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Movie {
+	//static long counter = 0l;
 	public static long movieId;
 	public String title;
 	//private int releaseDate;
@@ -28,7 +29,7 @@ public class Movie {
 		this.title = title;
 		this.releaseDate = releaseDate;
 		this.url = url;
-		this.movieId = 0;
+		this.movieId = 0l;
 	}
 	
 	@Override

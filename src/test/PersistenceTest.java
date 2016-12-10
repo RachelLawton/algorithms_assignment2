@@ -37,7 +37,7 @@ public class PersistenceTest {
 	  public void testPopulate()
 	  { 
 		 movieCatch = new MovieCatchAPI(null);
-	    assertEquals(3,movieCatch.usersIndex.size());
+	    assertEquals(2,movieCatch.usersIndex.size());
 	    //assertEquals(3,movieCatch.usersIndex.size());
 	   
 	  }

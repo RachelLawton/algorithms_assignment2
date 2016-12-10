@@ -27,7 +27,7 @@ public class RatingReader {
 		
 
 		// output user data to console.
-		if (userTokens.length == 4) {
+		if (userTokens.length == 2) {
 			Rating r = new Rating(userId,movieId,rating);//instead of going to console it foes to the arraylist term
 			ratings.add(r);
 			

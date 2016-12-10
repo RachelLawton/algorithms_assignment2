@@ -59,9 +59,9 @@ public class MovieCatchAPITest {
 			// User Rachel = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
 
 		    assertEquals (2, movieCatch.getUsers().size());
-		    movieCatch.addUser("Rachel","Lawton",19,"F","Programmer",11111);
-		    assertEquals (3, movieCatch.getUsers().size());
-		  } 
+		    movieCatch.deleteMovies();
+		  }
+		   
 		
 		@Test
 		public void testMovie(){
@@ -81,11 +81,13 @@ public class MovieCatchAPITest {
 			
 		  }
 		 
-		 @Test
-		 public void testAddRating()
-		 {
-			 
-		 }
+		 
+		 /*@Test
+			public void testAddRating(){
+			 movieCatch.addUser("Rachel","Lawton",19,"F","Programmer",11111);
+			 movieCatch.addMovie("Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");
+			 movieCatch.addRating(1, 1, 1);
+			}*/
 		
 		
 		@After

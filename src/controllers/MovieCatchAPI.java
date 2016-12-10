@@ -70,16 +70,17 @@ public class MovieCatchAPI
 		return usersIndex.get(userId);
 	}
 
-	public void addUser( String firstName, String lastName, int age, String gender, String job,long zipcode)
+	public User addUser( String firstName, String lastName, int age, String gender, String job,long zipcode)
 	{
 		User u = new User (firstName, lastName, age, gender, job, zipcode);
 		u.userId = usersIndex.size() + 1L;
 		usersIndex.put(u.userId, u);
+		return u;
 	}
 
-	public void removeUser(Long userId)
+	public User removeUser(Long userId)
 	{
-		User u = usersIndex.remove(userId);
+		return  usersIndex.remove(userId);
 	}
 
 
@@ -99,18 +100,19 @@ public class MovieCatchAPI
 		moviesIndex.clear();	
 	}
 
-	public void addMovie(String title, String releaseDate, String url)
+	public Movie addMovie(String title, String releaseDate, String url)
 	{
 
 		Movie m = new Movie(title,releaseDate,url);
 		m.movieId = moviesIndex.size() + 1L;
 		moviesIndex.put(m.movieId, m);
+		return m;
 
 	}
 	
-	public void deleteMovie(long movieId)
+	public  Movie deleteMovie(long movieId)
 	{
-		Movie m = moviesIndex.remove(movieId);
+		return moviesIndex.remove(movieId);
 	}
 	
 	public Movie getMovieById(long movieId)

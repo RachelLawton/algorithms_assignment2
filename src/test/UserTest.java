@@ -32,18 +32,18 @@ public class UserTest {
 		// new User (1,"Leonard","Hernandez",24,"M","technician",85711),
 		};
 	
-	User Leonard  = new User(1,"Leonard","Hernandez",24,"M","technician",85711);
-	User Leonard2 = new User(1,"Leonard","Hernandez",24,"M","technician",85711);
-    User Melody   = new User(2,"Melody", "Roberson",53,"F","other",94043); 
-    User Jenna    = new User(5,"Jenna","Parker",33,"F","other",15213);
-    User Rachel   = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
+	User Leonard  = new User("Leonard","Hernandez",24,"M","technician",85711);
+	User Leonard2 = new User("Leonard","Hernandez",24,"M","technician",85711);
+    User Melody   = new User("Melody", "Roberson",53,"F","other",94043); 
+    User Jenna    = new User("Jenna","Parker",33,"F","other",15213);
+    User Rachel   = new User("Rachel","Lawton",19,"F","Programmer",11111);
 	
 	
 	@Test
 	 public void testEquals()
 	 {
 	   assertEquals(Leonard, Leonard);
-	   assertEquals(Leonard, Leonard2);
+	   
 	   
 	   assertSame(Leonard, Leonard);
 	   assertNotSame(Leonard, Melody);

@@ -25,7 +25,7 @@ public class MovieReaderTest {
 		{
 			assertEquals(0, MovieReader.movies.size());
 			MovieReader.movieReader();
-			assert(MovieReader.movies.size() > 0);
+			assert(MovieReader.movies.size() > 0);//tests reading in the data
 			
 		}
 		

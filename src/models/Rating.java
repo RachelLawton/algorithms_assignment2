@@ -18,7 +18,7 @@ public class Rating {
 	{
 		return "User Id" + userId + "Movie Id"+ movieId +"Rating" + rating;
 	}
-
+//getters
 	public long getUserId() {
 		return userId;
 	}
@@ -30,7 +30,7 @@ public class Rating {
 	public int getRating() {
 		return rating;
 	}
-
+//setters
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}

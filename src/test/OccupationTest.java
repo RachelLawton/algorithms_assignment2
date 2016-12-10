@@ -13,7 +13,7 @@ import models.OccupationsReader;
 public class OccupationTest {
 
 	@Test
-	public void testmovie() throws IOException
+	public void testmovie() throws IOException//tests reading in the data
 	{
 		assertEquals(0, OccupationsReader.occupations.size());
 		OccupationsReader.occupationsReader();

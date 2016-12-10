@@ -1,14 +1,8 @@
 package controllers;
 
-import java.io.FileWriter;
-import java.io.ObjectOutputStream;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import models.Movie;
 import models.Rating;
@@ -28,7 +22,7 @@ public class MovieCatchAPI
 	{
 
 	}
-
+	// sets up serializer
 	public MovieCatchAPI(Serializer serializer)
 	{
 		this.serializer = serializer;
@@ -50,57 +44,57 @@ public class MovieCatchAPI
 		serializer.write(); 
 	}
 
-	
-	
+
+
 	//USERS
 
-	public Collection<User> getUsers ()
+	public Collection<User> getUsers () //get all users
 	{
 		return usersIndex.values();
 	}
 
-	public void removeUsers()
+	public void removeUsers()// removes all users
 	{
 		usersIndex.clear();
 
 	}
 
-	public User getUserByid(long userId)
+	public User getUserByid(long userId) //gets users by id
 	{
 		return usersIndex.get(userId);
 	}
 
 	public User addUser( String firstName, String lastName, int age, String gender, String job,long zipcode)
-	{
+	{ //adds user using 
 		User u = new User (firstName, lastName, age, gender, job, zipcode);
 		u.userId = usersIndex.size() + 1L;
 		usersIndex.put(u.userId, u);
 		return u;
 	}
 
-	public User removeUser(Long userId)
+	public User removeUser(Long userId) //remove user singular
 	{
 		return  usersIndex.remove(userId);
 	}
 
 
 
-	
-	
+
+
 
 	//MOVIES
 
-	public Collection<Movie> getMovies()
+	public Collection<Movie> getMovies()// get all movies
 	{
 		return moviesIndex.values();
 	}
 
-	public void deleteMovies()
+	public void deleteMovies() //delete all movies
 	{
 		moviesIndex.clear();	
 	}
 
-	public Movie addMovie(String title, String releaseDate, String url)
+	public Movie addMovie(String title, String releaseDate, String url) //adds movie 
 	{
 
 		Movie m = new Movie(title,releaseDate,url);
@@ -109,46 +103,51 @@ public class MovieCatchAPI
 		return m;
 
 	}
-	
-	public  Movie deleteMovie(long movieId)
+
+	public  Movie deleteMovie(long movieId)// deletes movie singular
 	{
 		return moviesIndex.remove(movieId);
 	}
-	
-	public Movie getMovieById(long movieId)
+
+	public Movie getMovieById(long movieId) // get movie by id
 	{
 		return moviesIndex.get(movieId);
 	}
 
-	
-	
-	
-	
-	
-//RATINGS
-	public void addRating(long userId, long movieId, int rating)
+
+
+
+
+
+	//RATINGS
+	public void addRating(long userId, long movieId, int rating) //adds a rating 
 	{
 		Rating r = new Rating(userId,movieId,rating);
 		ratingsIndex.add(r.getRating(),r);
 	}
 
-	public void deleteRatings()
+	public void deleteRatings() //delets all ratings
 	{
 		ratingsIndex.clear();
 	}
-	
-	public Rating  getRating(int rating, long userId)
+
+	public Rating  getRating(int rating, long userId) //gets rating
 	{
 		return ratingsIndex.get(rating);
 	}
-	
+
 	public String  movieRecommender()
 	{
 		return null;
-		
+
 	}
-	
-	
+
+	public Object getTopTenMovies(){
+
+		return null;
+	}
+
+
 
 
 

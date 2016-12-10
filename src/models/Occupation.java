@@ -11,19 +11,19 @@ public class Occupation
 		 
 	 }
 
-
+//getters
 	public String getOccupation() {
 		return occupation;
 	}
 
-
+//setters
 	public void setOccupation(String occupation) {
 		this.occupation = occupation;
 	}
 
 
-	public static void occupationsReader() {
+	//public static void occupationsReader() {
 		// TODO Auto-generated method stub
 		
 	}
-}
+

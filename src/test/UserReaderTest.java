@@ -12,7 +12,7 @@ import models.UserReader;
 public class UserReaderTest {
 
 	@Test
-	public void testmovie() throws IOException
+	public void testmovie() throws IOException//tests to read in data
 	{
 		assertEquals(0, UserReader.users.size());
 		UserReader.userReader();

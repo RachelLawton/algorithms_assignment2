@@ -20,9 +20,8 @@ public class OccupationsReader{
 		//each field is separated(delimited) by a '|'
 		String delims = "[|]";
 		while (inUsers.hasNextLine()) {
-			String userDetails = inUsers.nextLine().trim();// cleans up white space at the start
-			String[] userTokens = userDetails.split(delims);// splits the weight from the term
-
+			String userDetails = inUsers.nextLine();
+			String[] userTokens = userDetails.split(delims);
 			
 			String occupation = userTokens[0];
 			

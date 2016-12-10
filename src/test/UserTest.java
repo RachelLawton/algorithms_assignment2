@@ -40,7 +40,7 @@ public class UserTest {
 	
 	
 	@Test
-	 public void testEquals()
+	 public void testEquals()//test to see if there equal
 	 {
 	   assertEquals(Leonard, Leonard);
 	   
@@ -50,7 +50,7 @@ public class UserTest {
 	 }
 	
 	@Test
-	public void testNotEquals()
+	public void testNotEquals()//not equal
 	{
 		assertNotEquals(Leonard, Melody);
 		assertNotEquals(Leonard, Jenna);
@@ -59,7 +59,7 @@ public class UserTest {
 	}
 	
 	@Test 
-	public void testGetFirstName()
+	public void testGetFirstName()//get first name
 	{
 		assertEquals("Oliver",user.getFirstName());
 		assertNotEquals ("John",user.getFirstName());
@@ -67,14 +67,14 @@ public class UserTest {
 	}
 	
 	@Test 
-	public void testGetLastName(){
+	public void testGetLastName(){//get last name
 		assertNotEquals("Oliver",user.getLastName());
 		assertEquals("Parker",user1.getLastName());
 		
 	}
 
 	@Test
-	  public void testCreate()
+	  public void testCreate()//creates a user
 	  {
 	    assertEquals ("Rachel",            Rachel.getFirstName());
 	    assertEquals ("Lawton",            Rachel.getLastName());
@@ -86,7 +86,7 @@ public class UserTest {
 	
 	
 	 @Test
-	  public void testIds()
+	  public void testIds()//tests ids
 	  {
 	    Set<Long> Id = new HashSet<>();
 	    for (User user : users)

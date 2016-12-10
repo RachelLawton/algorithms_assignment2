@@ -33,6 +33,7 @@ public class MovieCatchAPITest {
 		@Test
 		  public void testUser()
 		  {
+			//tests to see if the user is in the map
 			
 			User Rachel = new User("Rachel","Lawton",19,"F","Programmer",11111);
 
@@ -45,7 +46,7 @@ public class MovieCatchAPITest {
 		 @Test
 		  public void testAddUsers()
 		  {
-			
+			//tests the add user method
 			 assertEquals(1,movieCatch.usersIndex.size());
 			 movieCatch.addUser("Nicola","Lawton",30,"F","gardener",11111); 
 			 assertEquals(2,movieCatch.usersIndex.size());
@@ -54,7 +55,7 @@ public class MovieCatchAPITest {
 		
 		 
 		 @Test
-		  public void testUserEmpty()
+		  public void testUserEmpty()//tests the delete method
 		  {
 			// User Rachel = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
 
@@ -64,7 +65,7 @@ public class MovieCatchAPITest {
 		   
 		
 		@Test
-		public void testMovie(){
+		public void testMovie(){//tests to see if the movie is there
 			//Movie ToyStory = new Movie(1,"Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
 			
 			assertEquals (0, movieCatch.getMovies().size());
@@ -72,7 +73,7 @@ public class MovieCatchAPITest {
 		}
 		
 		 @Test
-		  public void testAddMovie()
+		  public void testAddMovie()// tests adds movie method
 		  {
 			 assertEquals(1,movieCatch.moviesIndex.size());
 			 movieCatch.addMovie("Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);

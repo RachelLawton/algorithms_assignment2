@@ -17,8 +17,8 @@ public class RatingReader {
       //each field is separated(delimited) by a '|'
     String delims = "[|]";
     while (inUsers.hasNextLine()) {
-		String userDetails = inUsers.nextLine().trim();// cleans up white space at the start
-		String[] userTokens = userDetails.split(delims);// splits the weight from the term
+		String userDetails = inUsers.nextLine();
+		String[] userTokens = userDetails.split(delims);
 		
 		long userId = Long.parseLong(userTokens[0]);
 		long movieId = Long.parseLong(userTokens[1]);
@@ -26,9 +26,9 @@ public class RatingReader {
 					
 		
 
-		// output user data to console.
-		if (userTokens.length == 2) {
-			Rating r = new Rating(userId,movieId,rating);//instead of going to console it foes to the arraylist term
+		
+		if (userTokens.length == 4) {
+			Rating r = new Rating(userId,movieId,rating);//instead of going to console it goes to the map ratings
 			ratings.add(r);
 			
 

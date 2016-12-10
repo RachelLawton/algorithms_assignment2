@@ -11,7 +11,7 @@ import models.RatingReader;
 public class RatingReaderTest {
 
 	@Test
-	public void testmovie() throws IOException
+	public void testmovie() throws IOException//tests the reads in data
 	{
 		assertEquals(0, RatingReader.ratings.size());
 		RatingReader.ratingReader();

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Movie {
 	//static long counter = 0l;
-	public static long movieId;
+	public long movieId;
 	public String title;
 	//private int releaseDate;
 	public String releaseDate;
@@ -25,7 +25,7 @@ public class Movie {
 		//this.rating = rating;
 	}
 
-	public Movie(String title, String releaseDate, String Url){
+	public Movie(String title, String releaseDate, String url){
 		this.title = title;
 		this.releaseDate = releaseDate;
 		this.url = url;
@@ -39,7 +39,7 @@ public class Movie {
 	}
 	
 	
-
+//getters
 	public String getTitle() {
 		return title;
 	}
@@ -62,7 +62,7 @@ public class Movie {
 	}
 
 
-
+//setters
 	public void setRating(int rating) {
 		this.rating = rating;
 	}

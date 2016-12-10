@@ -41,7 +41,7 @@ public class PersistenceTest {
 	    //assertEquals(3,movieCatch.usersIndex.size());
 	   
 	  }
-	
+	//tests serializer
 	  @Test
 	  public void testXMLSerializer() throws Exception{
 	   

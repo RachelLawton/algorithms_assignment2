@@ -24,23 +24,24 @@ public class User {
 		this.job = job;
 		this.userId = userId;
 	}
-
+	
+	public User(String firstName, String lastName, int age, String gender, String job, long zipcode){
+		this.firstName =firstName;
+		this.lastName =lastName;
+		this.age = age;
+		this.zipcode = zipcode;	
+		this.gender = gender;
+		this.job = job;
+		this.userId = 0l;
+	}
 	
 	@Override
 	public String toString()
 	{
-		 return toStringHelper(this).addValue(firstName)
-                 .addValue(lastName)
-                 .addValue(age)
-                 .addValue(gender) 
-                 .addValue(job)
-                 .addValue(zipcode)
-                 .toString();
+		 return "User id" + userId + "Last Name"+ lastName + "age"+ age+ "Gender" + gender + "Job" + job + "zipcode" + zipcode;
 	}
-
 	
 	
-
 	public long getUserId() {
 		return userId;
 	}
@@ -125,14 +126,14 @@ public class User {
 
 		
 	
-	@Override 
+	/*@Override 
 	public int hashCode()
 	{
 		return Objects.hashCode(this.firstName, this.lastName, this.age, this.gender,this.job,this.zipcode);
-	}
+	}*/
 	
 	
-	@Override
+	/*@Override
 	  public boolean equals(final Object obj)
 	  {
 	    if (obj instanceof User)
@@ -150,6 +151,6 @@ public class User {
 	    {
 	      return false;
 	    }
-	  }
+	  }*/
 	
 }

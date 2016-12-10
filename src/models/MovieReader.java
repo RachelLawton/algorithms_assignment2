@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class MovieReader {
 
-	//public static HashMap<Long,Movie> movies= new HashMap<Long,Movie>();
+	public static HashMap<Long,Movie> movies= new HashMap<Long,Movie>();
 	//public static List<String> MoviesList;
 
-	public static ArrayList<Movie> movies= new ArrayList<Movie>();
+	//public static ArrayList<Movie> movies= new ArrayList<Movie>();
 
 
 	public static void movieReader() throws IOException
@@ -40,12 +40,12 @@ public class MovieReader {
 
 			// output user data to console.
 			if (userTokens.length == 23) {
-				Movie m = new Movie(movieId,title,releaseDate,url);//instead of going to console it foes to the arraylist term
-				//movies.put(movieId, m);
-				movies.add(m);
+				Movie m = new Movie(title,releaseDate,url);//instead of going to console it foes to the arraylist term
+				movies.put(m.movieId, m);
+				//movies.add(m);
 
 				//if (userTokens.length == 23) {
-				// System.out.println(movieId+title+releaseDate+url+rating);
+				//System.out.println(title+releaseDate+url);
 
 			} else {
 				inUsers.close();
@@ -55,4 +55,5 @@ public class MovieReader {
 		inUsers.close();
 
 	}
-}
+	}
+

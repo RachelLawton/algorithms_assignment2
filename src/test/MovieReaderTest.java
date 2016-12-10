@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,9 +32,14 @@ public class MovieReaderTest {
 		@Test
 		public void testGetTitles()
 		{
-			//assertEquals("Toy Story (1995)", MovieReader.MoviesList.get(0).getTitle());
+			//assertEquals("Toy Story (1995)", MovieReader.movies.get(0).getTitle());
 			//assertNotNull(MovieReader.movies.get(new Long(1)));
 			
+		}
+		
+		@After
+		public void tearDown()
+		{
 		}
 	}
 

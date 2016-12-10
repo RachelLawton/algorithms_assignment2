@@ -14,14 +14,15 @@ public class MovieCatchAPITest {
 
 		private MovieCatchAPI movieCatch;
 		
-		 public static User[] users =
+		/*public static User[] users =
 			  {
-				new User(6,"Rachel","Lawton",19,"F","Programmer",11111)  
+				new User("Rachel","Lawton",19,"F","Programmer",11111), 
+				new User("Nicola","Lawton",30,"F","gardener",11111)  
 			  };
 		 
 		 public static Movie[] movies = {
 				 new Movie(1,"Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)") //,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0)	 
-		 };
+		 };*/
 		
 		@Before
 		public void setup()
@@ -32,50 +33,60 @@ public class MovieCatchAPITest {
 		@Test
 		  public void testUser()
 		  {
-			User Rachel = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
+			
+			User Rachel = new User("Rachel","Lawton",19,"F","Programmer",11111);
 
 		    assertEquals (0, movieCatch.getUsers().size());
-		    movieCatch.addUser(6,"Rachel","Lawton",19,"F","Programmer",11111);
+		    movieCatch.addUser("Rachel","Lawton",19,"F","Programmer",11111);
 		  }  
 		
+		
+
 		 @Test
 		  public void testAddUsers()
 		  {
-		    for (User user : users)
-		    {
-		      movieCatch.addUser(user.userId,user.getFirstName(), user.getLastName(), user.getAge(), user.getGender(), user.getJob(), user.zipcode);
-		    }
-		    assertEquals (users.length, movieCatch.getUsers().size());
+			
+			 assertEquals(1,movieCatch.usersIndex.size());
+			 movieCatch.addUser("Nicola","Lawton",30,"F","gardener",11111); 
+			 assertEquals(2,movieCatch.usersIndex.size());
+		
 		  }
 		
 		 
-		/* @Test
+		 @Test
 		  public void testUserEmpty()
 		  {
-			 User Rachel = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
+			// User Rachel = new User(6,"Rachel","Lawton",19,"F","Programmer",11111);
 
-		    assertEquals (1, movieCatch.getUsers().size());
-		    movieCatch.addUser(6,"Rachel","Lawton",19,"F","Programmer",11111);
-		    assertEquals (1, movieCatch.getUsers().size());
-		  } */
+		    assertEquals (2, movieCatch.getUsers().size());
+		    movieCatch.addUser("Rachel","Lawton",19,"F","Programmer",11111);
+		    assertEquals (3, movieCatch.getUsers().size());
+		  } 
 		
 		@Test
 		public void testMovie(){
-			Movie ToyStory = new Movie(1,"Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
+			//Movie ToyStory = new Movie(1,"Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
 			
 			assertEquals (0, movieCatch.getMovies().size());
-		    movieCatch.addMovie(1,"Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
+		    movieCatch.addMovie("Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
 		}
 		
 		 @Test
 		  public void testAddMovie()
 		  {
-		    for (Movie movie : movies)
-		    {
-		      movieCatch.addMovie(movie.getMovieId(),movie.getTitle(), movie.getReleaseDate(), movie.getUrl());
-		    }
-		    assertEquals (movies.length, movieCatch.getMovies().size());
+			 assertEquals(1,movieCatch.moviesIndex.size());
+			 movieCatch.addMovie("Toy Story (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Toy%20Story%20(1995)");//,0|0|0|1|1|1|0|0|0|0|0|0|0|0|0|0|0|0|0);
+			 assertEquals(2,movieCatch.moviesIndex.size());	
+			 movieCatch.addMovie("Dead Man Walking (1995)","01-Jan-1995","http://us.imdb.com/M/title-exact?Dead%20Man%20Walking%20(1995)");
+			
 		  }
+		 
+		 @Test
+		 public void testAddRating()
+		 {
+			 
+		 }
+		
 		
 		@After
 		public void tearDown()
